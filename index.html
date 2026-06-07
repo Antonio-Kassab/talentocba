@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CastingCBA | Plataforma de Actores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="site-header">
+            <div class="brand">
+                <span class="brand-logo">CastingCBA</span>
+                <p class="brand-tag">Casting & Talento</p>
+            </div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="#buscador" class="nav-link">Buscador</a>
+                <a href="#registro" class="nav-link">Registro Actor</a>
+                <a href="#footer" class="nav-link">Contacto</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="buscador" class="page-section section-buscador">
+                <div class="section-header">
+                    <span class="eyebrow">Vista Director</span>
+                    <h1>Encuentra al talento ideal</h1>
+                    <p>Filtra por nombre, edad y ubicación. Revisa las tarjetas de actores disponibles y selecciona los mejores perfiles.</p>
+                </div>
+
+                <div class="panel filtro-panel" aria-labelledby="filtro-titulo">
+                    <h2 id="filtro-titulo">Búsqueda avanzada</h2>
+                    <form class="form-grid" id="formulario-buscador">
+                        <label class="form-group" for="busqueda-input">
+                            <span>Nombre</span>
+                            <input type="search" id="busqueda-input" name="nombre" placeholder="Ej. María López">
+                        </label>
+
+                        <label class="form-group" for="busqueda-edad">
+                            <span>Rango de edad</span>
+                            <input type="number" id="busqueda-edad" name="edad" min="16" max="80" placeholder="Ej. 25">
+                        </label>
+
+                        <label class="form-group" for="busqueda-provincia">
+                            <span>Provincia / Ciudad</span>
+                            <input type="text" id="busqueda-provincia" name="ubicacion" placeholder="Córdoba, Buenos Aires...">
+                        </label>
+                    </form>
+                </div>
+
+                <div class="panel lista-panel">
+                    <div class="panel-header">
+                        <h2>Actores disponibles</h2>
+                        <p>Ejemplo de perfiles para usar como referencia visual antes de la carga dinámica.</p>
+                    </div>
+                    <div id="contenedor-actores" class="actor-grid" role="list">
+                        <article class="actor-card" role="listitem">
+                            <div class="actor-card__media">
+                                <img src="https://via.placeholder.com/320x320?text=Actriz" alt="Foto de Camila Fernández">
+                            </div>
+                            <div class="actor-card__body">
+                                <h3>Camila Fernández</h3>
+                                <p class="actor-meta">27 años · Córdoba</p>
+                                <ul class="actor-skills">
+                                    <li>Actuación frente a cámara</li>
+                                    <li>Teatro físico</li>
+                                    <li>Canto</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="actor-card" role="listitem">
+                            <div class="actor-card__media">
+                                <img src="https://via.placeholder.com/320x320?text=Actor" alt="Foto de Martín Ramírez">
+                            </div>
+                            <div class="actor-card__body">
+                                <h3>Martín Ramírez</h3>
+                                <p class="actor-meta">34 años · Mendoza</p>
+                                <ul class="actor-skills">
+                                    <li>Danza</li>
+                                    <li>Actuación frente a cámara</li>
+                                    <li>Teatro físico</li>
+                                </ul>
+                            </div>
+                        </article>
+
+                        <article class="actor-card" role="listitem">
+                            <div class="actor-card__media">
+                                <img src="https://via.placeholder.com/320x320?text=Actriz" alt="Foto de Sofía Torres">
+                            </div>
+                            <div class="actor-card__body">
+                                <h3>Sofía Torres</h3>
+                                <p class="actor-meta">22 años · Buenos Aires</p>
+                                <ul class="actor-skills">
+                                    <li>Canto</li>
+                                    <li>Actuación frente a cámara</li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="registro" class="page-section section-registro">
+                <div class="section-header">
+                    <span class="eyebrow">Vista Actor</span>
+                    <h2>Postulate como actor</h2>
+                    <p>Completa tus datos para que los directores puedan encontrarte en el casting ideal.</p>
+                </div>
+
+                <div class="panel registro-panel">
+                    <form id="formulario-actor" class="form-panel" novalidate>
+                        <div class="form-group">
+                            <label for="actor-nombre">Nombre completo</label>
+                            <input type="text" id="actor-nombre" name="nombre" placeholder="Ej. Valentina Pérez" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="actor-edad">Edad</label>
+                            <input type="number" id="actor-edad" name="edad" min="16" max="80" placeholder="Ej. 29" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="actor-email">Email</label>
+                            <input type="email" id="actor-email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="actor-foto">Foto (URL)</label>
+                            <input type="url" id="actor-foto" name="foto" placeholder="https://ejemplo.com/mi-foto.jpg">
+                        </div>
+
+                        <fieldset class="form-group skill-group">
+                            <legend>Habilidades</legend>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="habilidades" value="teatro-fisico">
+                                Teatro físico
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="habilidades" value="canto">
+                                Canto
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="habilidades" value="danza">
+                                Danza
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" name="habilidades" value="actuacion-camara">
+                                Actuación frente a cámara
+                            </label>
+                        </fieldset>
+
+                        <button type="submit" class="btn-submit">Registrarse</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer" class="site-footer">
+            <p>© 2026 CastingCBA. Plataforma de búsqueda y postulación de talentos. Diseñado para casting de actores.</p>
+        </footer>
+    </div>
+</body>
+</html>
