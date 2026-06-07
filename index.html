@@ -3,161 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CastingCBA | Plataforma de Actores</title>
+    <title>TalentoCBA | Plataforma de Actores</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="app-shell">
         <header class="site-header">
             <div class="brand">
-                <span class="brand-logo">CastingCBA</span>
+                <span class="brand-logo">TalentoCBA</span>
                 <p class="brand-tag">Casting & Talento</p>
             </div>
             <nav class="main-nav" aria-label="Navegación principal">
-                <a href="#buscador" class="nav-link">Buscador</a>
-                <a href="#registro" class="nav-link">Registro Actor</a>
-                <a href="#footer" class="nav-link">Contacto</a>
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="busco-talento.html" class="nav-link">Busco talento</a>
+                <a href="soy-talento.html" class="nav-link">Soy talento</a>
+                <a href="castings.html" class="nav-link">Castings</a>
+                <a href="sobre-nosotros.html" class="nav-link">Sobre nosotros</a>
             </nav>
         </header>
 
         <main>
-            <section id="buscador" class="page-section section-buscador">
+
+            <div class="escenario-teatro">
+  
+                <div class="telon-hoja izquierda"></div>
+                <div class="telon-hoja derecha"></div>
+                
+                    <div class="contenido-escenario">
+                        <h3>¡El espectáculo está por comenzar!</h3>
+                        <p>Explorá los perfiles más destacados de la provincia.</p>
+                    </div>
+
+            </div>
+            
+            <section class="page-section">
                 <div class="section-header">
-                    <span class="eyebrow">Vista Director</span>
-                    <h1>Encuentra al talento ideal</h1>
-                    <p>Filtra por nombre, edad y ubicación. Revisa las tarjetas de actores disponibles y selecciona los mejores perfiles.</p>
+                    <h1>Bienvenido a TalentoCBA</h1>
+                    <p>Selecciona una sección para comenzar: busca talento, regístrate como actor o conoce nuestro proyecto.</p>
                 </div>
 
-                <div class="panel filtro-panel" aria-labelledby="filtro-titulo">
-                    <h2 id="filtro-titulo">Búsqueda avanzada</h2>
-                    <form class="form-grid" id="formulario-buscador">
-                        <label class="form-group" for="busqueda-input">
-                            <span>Nombre</span>
-                            <input type="search" id="busqueda-input" name="nombre" placeholder="Ej. María López">
-                        </label>
-
-                        <label class="form-group" for="busqueda-edad">
-                            <span>Rango de edad</span>
-                            <input type="number" id="busqueda-edad" name="edad" min="16" max="80" placeholder="Ej. 25">
-                        </label>
-
-                        <label class="form-group" for="busqueda-provincia">
-                            <span>Provincia / Ciudad</span>
-                            <input type="text" id="busqueda-provincia" name="ubicacion" placeholder="Córdoba, Buenos Aires...">
-                        </label>
-                    </form>
-                </div>
-
-                <div class="panel lista-panel">
-                    <div class="panel-header">
-                        <h2>Actores disponibles</h2>
-                        <p>Ejemplo de perfiles para usar como referencia visual antes de la carga dinámica.</p>
-                    </div>
-                    <div id="contenedor-actores" class="actor-grid" role="list">
-                        <article class="actor-card" role="listitem">
-                            <div class="actor-card__media">
-                                <img src="https://via.placeholder.com/320x320?text=Actriz" alt="Foto de Camila Fernández">
-                            </div>
-                            <div class="actor-card__body">
-                                <h3>Camila Fernández</h3>
-                                <p class="actor-meta">27 años · Córdoba</p>
-                                <ul class="actor-skills">
-                                    <li>Actuación frente a cámara</li>
-                                    <li>Teatro físico</li>
-                                    <li>Canto</li>
-                                </ul>
-                            </div>
-                        </article>
-
-                        <article class="actor-card" role="listitem">
-                            <div class="actor-card__media">
-                                <img src="https://via.placeholder.com/320x320?text=Actor" alt="Foto de Martín Ramírez">
-                            </div>
-                            <div class="actor-card__body">
-                                <h3>Martín Ramírez</h3>
-                                <p class="actor-meta">34 años · Mendoza</p>
-                                <ul class="actor-skills">
-                                    <li>Danza</li>
-                                    <li>Actuación frente a cámara</li>
-                                    <li>Teatro físico</li>
-                                </ul>
-                            </div>
-                        </article>
-
-                        <article class="actor-card" role="listitem">
-                            <div class="actor-card__media">
-                                <img src="https://via.placeholder.com/320x320?text=Actriz" alt="Foto de Sofía Torres">
-                            </div>
-                            <div class="actor-card__body">
-                                <h3>Sofía Torres</h3>
-                                <p class="actor-meta">22 años · Buenos Aires</p>
-                                <ul class="actor-skills">
-                                    <li>Canto</li>
-                                    <li>Actuación frente a cámara</li>
-                                </ul>
-                            </div>
-                        </article>
-                    </div>
+                <div class="panel">
+                    <nav class="home-links">
+                        <ul>
+                            <li><a class="nav-link" href="busco-talento.html">Busco talento</a></li>
+                            <li><a class="nav-link" href="soy-talento.html">Soy talento</a></li>
+                            <li><a class="nav-link" href="castings.html">Castings</a></li>
+                            <li><a class="nav-link" href="sobre-nosotros.html">Sobre nosotros</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </section>
 
-            <section id="registro" class="page-section section-registro">
+            <section class="page-section">
                 <div class="section-header">
-                    <span class="eyebrow">Vista Actor</span>
-                    <h2>Postulate como actor</h2>
-                    <p>Completa tus datos para que los directores puedan encontrarte en el casting ideal.</p>
-                </div>
-
-                <div class="panel registro-panel">
-                    <form id="formulario-actor" class="form-panel" novalidate>
-                        <div class="form-group">
-                            <label for="actor-nombre">Nombre completo</label>
-                            <input type="text" id="actor-nombre" name="nombre" placeholder="Ej. Valentina Pérez" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="actor-edad">Edad</label>
-                            <input type="number" id="actor-edad" name="edad" min="16" max="80" placeholder="Ej. 29" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="actor-email">Email</label>
-                            <input type="email" id="actor-email" name="email" placeholder="tucorreo@ejemplo.com" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="actor-foto">Foto (URL)</label>
-                            <input type="url" id="actor-foto" name="foto" placeholder="https://ejemplo.com/mi-foto.jpg">
-                        </div>
-
-                        <fieldset class="form-group skill-group">
-                            <legend>Habilidades</legend>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" name="habilidades" value="teatro-fisico">
-                                Teatro físico
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" name="habilidades" value="canto">
-                                Canto
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" name="habilidades" value="danza">
-                                Danza
-                            </label>
-                            <label class="checkbox-inline">
-                                <input type="checkbox" name="habilidades" value="actuacion-camara">
-                                Actuación frente a cámara
-                            </label>
-                        </fieldset>
-
-                        <button type="submit" class="btn-submit">Registrarse</button>
-                    </form>
+                    <h2>Acceso rápido</h2>
+                    <p>Usa el menú superior para navegar entre las páginas de la plataforma.</p>
                 </div>
             </section>
         </main>
 
         <footer id="footer" class="site-footer">
-            <p>© 2026 CastingCBA. Plataforma de búsqueda y postulación de talentos. Diseñado para casting de actores.</p>
+            <p>© 2026 TalentoCBA. Plataforma de búsqueda y postulación de talentos.</p>
         </footer>
     </div>
 </body>
