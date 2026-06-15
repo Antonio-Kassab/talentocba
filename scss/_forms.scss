@@ -1,0 +1,88 @@
+@use 'variables' as *;
+
+.form-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  label,
+  span {
+    font-size: 0.95rem;
+    color: $text;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #111;
+    color: $text;
+  }
+
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.form-panel {
+  display: grid;
+  gap: 20px;
+}
+
+.form-panel .form-group {
+  max-width: 520px;
+}
+
+.skill-group {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.skill-group legend {
+  padding: 0 8px;
+  margin-left: 4px;
+  color: $text;
+  font-weight: 600;
+}
+
+.checkbox-inline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  color: $text-muted;
+
+  input {
+    width: auto;
+    accent-color: $accent;
+  }
+}
+
+.btn-submit {
+  width: fit-content;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, $accent, #c97c46);
+  color: #090909;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 35px rgba(39, 174, 96, 0.18);
+  }
+}

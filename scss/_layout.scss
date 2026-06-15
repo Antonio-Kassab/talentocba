@@ -1,0 +1,119 @@
+@use 'variables' as *;
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0 32px;
+  border-bottom: 1px solid $border;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.brand-logo {
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: gradient(rgba(13, 141, 66, 0.478)) from 0% to 100% via $accent;    
+}
+
+.brand-tag {
+  margin: 0;
+  color: $text-muted;
+  font-size: 0.95rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.home-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 18px;
+}
+
+.home-links a.nav-link {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.nav-link {
+  color: $text-muted;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: $accent;
+  }
+}
+
+.page-section {
+  margin-top: 40px;
+  padding: 32px;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+.section-header {
+  max-width: 760px;
+  margin-bottom: 28px;
+
+  h1,
+  h2 {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 2.4vw, 2.4rem);
+  }
+
+  p {
+    margin: 0;
+    color: $text-muted;
+    font-size: 1rem;
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: $accent;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.panel {
+  padding: 24px;
+  background: rgba(12, 12, 12, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+}
+
+.site-footer {
+  margin: 40px 0 20px;
+  padding-top: 18px;
+  color: $text-muted;
+  border-top: 1px solid $border;
+  text-align: center;
+}
