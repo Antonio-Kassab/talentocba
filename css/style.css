@@ -75,6 +75,7 @@ button, input, select {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
   gap: 18px;
 }
 
@@ -148,19 +149,19 @@ button, input, select {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.form-group {
+.grupo-formulario {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.form-group label,
-.form-group span {
+.grupo-formulario label,
+.grupo-formulario span {
   font-size: 0.95rem;
   color: #f3f3f3;
 }
-.form-group input,
-.form-group select,
-.form-group textarea {
+.grupo-formulario input,
+.grupo-formulario select,
+.grupo-formulario textarea {
   width: 100%;
   padding: 14px 16px;
   border-radius: 16px;
@@ -168,27 +169,27 @@ button, input, select {
   background: #111;
   color: #f3f3f3;
 }
-.form-group input::placeholder {
+.grupo-formulario input::placeholder {
   color: rgba(255, 255, 255, 0.4);
 }
 
-.form-panel {
+.formulario-panel {
   display: grid;
   gap: 20px;
 }
 
-.form-panel .form-group {
+.formulario-panel .grupo-formulario {
   max-width: 520px;
 }
 
-.skill-group {
+.grupo-habilidades {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 18px;
   padding: 18px;
   background: rgba(255, 255, 255, 0.02);
 }
 
-.skill-group legend {
+.grupo-habilidades legend {
   padding: 0 8px;
   margin-left: 4px;
   color: #f3f3f3;
@@ -207,7 +208,7 @@ button, input, select {
   accent-color: #b11226;
 }
 
-.btn-submit {
+.btn-enviar {
   width: fit-content;
   padding: 14px 30px;
   border: none;
@@ -218,9 +219,107 @@ button, input, select {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.btn-submit:hover, .btn-submit:focus-visible {
+.btn-enviar:hover, .btn-enviar:focus-visible {
   transform: translateY(-1px);
   box-shadow: 0 18px 35px rgba(39, 174, 96, 0.18);
+}
+
+.registro-contenedor {
+  display: grid;
+  gap: 32px;
+}
+
+@media (min-width: 900px) {
+  .registro-contenedor {
+    grid-template-columns: 1.35fr 0.95fr;
+    align-items: start;
+  }
+}
+
+.vista-modelo {
+  display: grid;
+  gap: 20px;
+  padding: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.vista-modelo-cabecera {
+  display: grid;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(177, 18, 38, 0.16);
+  color: #f3f3f3;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.vista-modelo-cabecera h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #f3f3f3;
+}
+
+.vista-modelo-cabecera p {
+  margin: 0;
+  color: #d0c7c7;
+}
+
+.tarjeta-modelo {
+  display: grid;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tarjeta-avatar {
+  min-height: 180px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(177, 18, 38, 0.16), rgba(201, 124, 70, 0.08));
+  display: grid;
+  place-items: center;
+  color: #f3f3f3;
+  font-weight: 700;
+}
+
+.tarjeta-detalle {
+  display: grid;
+  gap: 6px;
+}
+
+.tarjeta-etiqueta {
+  margin: 0;
+  color: #d0c7c7;
+  font-size: 0.95rem;
+}
+
+.tarjeta-texto {
+  margin: 0;
+  color: #f3f3f3;
+  font-weight: 600;
+}
+
+.tarjeta-habilidades {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  color: #f3f3f3;
+}
+
+.tarjeta-habilidades li {
+  list-style: disc;
 }
 
 .actor-grid {
