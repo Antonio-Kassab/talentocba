@@ -90,4 +90,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Llamar función inicial
   actualizarTarjeta();
+
+  const boton = document.getElementById("btn-registrarse");
+  
+  boton.addEventListener("click", function() {
+    // Aquí podrías agregar la lógica para enviar los datos a tu servidor o mostrar un mensaje de éxito.
+    // Por ejemplo:
+
+  fetch("https://my-json-server.typicode.com/Antonio-Kassab/talentocba/talento", {
+  method: "POST",
+  body: JSON.stringify({
+    id: 3,
+    nombre: inputNombre.value,
+    edad: inputEdad.value,
+    email: inputEmail.value,
+    genero: "Masculino"
+  }),
+  headers: {
+    "Content-Type": "application/json; charset=UTF-8",
+  },
+});
+alert("¡Registro exitoso! Gracias por unirte a nuestro talento."); // No se guardan realmente los datos en el servidor, ya que json-server es una herramienta de desarrollo y no tiene persistencia real.
+
+});
+
+
 });
