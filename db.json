@@ -1,11 +1,36 @@
  {
-  "posts": [
+  "talento": [
     {
-      "id": 1,
-      "title": "hello"
+      "nombre": "Valentina Pérez",
+      "edad": 29,
+      "email": "valentina@ejemplo.com",
+      "habilidades": [
+        "teatro-fisico",
+        "canto"
+      ],
+      "genero": "Femenino"
+    },
+    {
+      "nombre": "Valentin Pera",
+      "edad": 92,
+      "email": "valentin@ejemplo.com",
+      "habilidades": [
+        "teatro-fisico",
+        "actuacion-camara",
+        "acentos"
+      ],
+      "genero": "Masculino"
+    },
+    {
+      "nombre": "Juan Sosa",
+      "edad": 29,
+      "email": "juan@ejemplo.com",
+      "habilidades": [
+        "canto",
+        "danza",
+        "acentos"
+      ],
+      "genero": "Femenino"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
