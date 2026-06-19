@@ -6,6 +6,7 @@
     <title>Soy talento — TalentoCBA</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="Registro de actores — CastingCBA">
+    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="app-shell">
@@ -69,6 +70,10 @@
                                     Danza
                                 </label>
                                 <label class="checkbox-inline">
+                                    <input type="checkbox" name="habilidades" value="acentos">
+                                    Manejo de acentos
+                                </label>
+                                <label class="checkbox-inline">
                                     <input type="checkbox" name="habilidades" value="actuacion-camara">
                                     Actuación frente a cámara
                                 </label>
@@ -90,11 +95,11 @@
                                 </div>
                                 <div class="tarjeta-detalle">
                                     <p class="tarjeta-etiqueta">Nombre</p>
-                                    <p class="tarjeta-texto">Valentina Pérez</p>
+                                    <p class="tarjeta-texto" id="tarjeta-nombre-preview"></p>
                                 </div>
                                 <div class="tarjeta-detalle">
                                     <p class="tarjeta-etiqueta">Edad</p>
-                                    <p class="tarjeta-texto">29</p>
+                                    <p class="tarjeta-texto"><!-- Cargado por codigo --> </p>
                                 </div>
                                 <div class="tarjeta-detalle">
                                     <p class="tarjeta-etiqueta">Email</p>
@@ -102,12 +107,8 @@
                                 </div>
                                 <div class="tarjeta-detalle">
                                     <p class="tarjeta-etiqueta">Habilidades</p>
-                                    <ul class="tarjeta-habilidades">
-                                        <li>Teatro físico</li>
-                                        <li>Canto</li>
-                                        <li>Danza</li>
-                                        <li>Actuación frente a cámara</li>
-                                    </ul>
+                                    <ul class="tarjeta-habilidades" id="tarjeta-habilidades-preview">
+                                    </ul>   
                                 </div>
                             </div>
                         </aside>
