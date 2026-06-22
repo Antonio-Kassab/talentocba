@@ -5,14 +5,18 @@ document.addEventListener('DOMContentLoaded', function() {
   const inputNombre = document.getElementById('actor-nombre');
   const inputEdad = document.getElementById('actor-edad');
   const inputEmail = document.getElementById('actor-email');
+  const inputCelular = document.getElementById('actor-celular');
+  const inputGeneroNodes = document.querySelectorAll('input[name="genero"]');
   const inputFoto = document.getElementById('actor-foto');
   const checkboxesHabilidades = document.querySelectorAll('input[name="habilidades"]');
 
   // Referencias a los elementos de la tarjeta modelo
   const tarjetaTextoNombre = document.getElementById('tarjeta-nombre-preview');
-  const tarjetaTextoEdad = document.querySelector('.tarjeta-modelo .tarjeta-detalle:nth-child(3) .tarjeta-texto'); // Pasar a getElementById
-  const tarjetaTextoEmail = document.querySelector('.tarjeta-modelo .tarjeta-detalle:nth-child(4) .tarjeta-texto'); // Pasar a getElementById
-  const tarjetaAvatar = document.querySelector('.tarjeta-avatar'); // Pasar a getElementById
+  const tarjetaTextoEdad = document.getElementById('tarjeta-edad-preview');
+  const tarjetaTextoEmail = document.getElementById('tarjeta-email-preview');
+  const tarjetaTextoCelular = document.getElementById('tarjeta-celular-preview');
+  const tarjetaTextoGenero = document.getElementById('tarjeta-genero-preview');
+  const tarjetaAvatar = document.getElementById('tarjeta-avatar-preview');
   const tarjetaHabilidades = document.getElementById('tarjeta-habilidades-preview');
 
   // Función para actualizar la tarjeta
@@ -36,6 +40,19 @@ document.addEventListener('DOMContentLoaded', function() {
       tarjetaTextoEmail.textContent = inputEmail.value;
     } else {
       tarjetaTextoEmail.textContent = 'tucorreo@ejemplo.com';
+    }
+
+    // Actualizar celular
+    if (inputCelular && inputCelular.value) {
+      tarjetaTextoCelular.textContent = inputCelular.value;
+    } else if (tarjetaTextoCelular) {
+      tarjetaTextoCelular.textContent = '+54 9 351 1234 567';
+    }
+
+    // Actualizar género
+    if (tarjetaTextoGenero) {
+      const seleccionado = Array.from(inputGeneroNodes).find(r => r.checked);
+      tarjetaTextoGenero.textContent = seleccionado ? seleccionado.value : 'No especificado';
     }
 
     // Actualizar foto
@@ -81,6 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (inputNombre) inputNombre.addEventListener('input', actualizarTarjeta);
   if (inputEdad) inputEdad.addEventListener('input', actualizarTarjeta);
   if (inputEmail) inputEmail.addEventListener('input', actualizarTarjeta);
+  if (inputCelular) inputCelular.addEventListener('input', actualizarTarjeta);
+  inputGeneroNodes.forEach(r => r.addEventListener('change', actualizarTarjeta));
   if (inputFoto) inputFoto.addEventListener('input', actualizarTarjeta);
 
   // Event listeners para checkboxes
@@ -97,6 +116,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Aquí podrías agregar la lógica para enviar los datos a tu servidor o mostrar un mensaje de éxito.
     // Por ejemplo:
 
+  const generoSeleccionado = Array.from(inputGeneroNodes).find(r => r.checked)?.value || '';
+
   fetch("https://my-json-server.typicode.com/Antonio-Kassab/talentocba/talento", {
   method: "POST",
   body: JSON.stringify({
@@ -104,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
     nombre: inputNombre.value,
     edad: inputEdad.value,
     email: inputEmail.value,
-    genero: "Masculino"
+    celular: inputCelular ? inputCelular.value : '',
+    genero: generoSeleccionado
   }),
   headers: {
     "Content-Type": "application/json; charset=UTF-8",

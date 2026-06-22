@@ -10,10 +10,10 @@
 </head>
 <body>
     <div class="app-shell">
-        <header class="site-header">
+        <header class="sitio-header">
             <div class="brand">
-                <span class="brand-logo">TalentoCBA</span>
-                <p class="brand-tag">Casting & Talento</p>
+                <span class="brand-logo">Talento<span class="resalto-rojo">CBA</span></span>
+                
             </div>
             <nav class="main-nav" aria-label="Navegación principal">
                 <a href="index.html" class="nav-link">Inicio</a>
@@ -29,26 +29,37 @@
                 <div class="section-header">
                     <span class="eyebrow">Vista Director</span>
                     <h1>Encuentra al talento ideal</h1>
-                    <p>Filtra por nombre, edad y ubicación. Revisa las tarjetas de actores disponibles.</p>
+                    <p>Filtra por edad y género. Revisa las tarjetas de actores disponibles.</p>
                 </div>
 
                 <div class="panel filtro-panel" aria-labelledby="filtro-titulo">
                     <h2 id="filtro-titulo">Búsqueda avanzada</h2>
                     <form class="form-grid" id="formulario-buscador">
-                        <label class="form-group" for="busqueda-input">
-                            <span>Nombre</span>
-                            <input type="search" id="busqueda-input" name="nombre" placeholder="Ej. María López">
-                        </label>
-
                         <label class="form-group" for="busqueda-edad">
                             <span>Rango de edad</span>
-                            <input type="number" id="busqueda-edad" name="edad" min="16" max="80" placeholder="Ej. 25">
+                            <select id="busqueda-edad" name="edad">
+                                <option value="">Todos los rangos</option>
+                                <option value="18-29">18 a 29 años</option>
+                                <option value="30-39">30 a 39 años</option>
+                                <option value="40-49">40 a 49 años</option>
+                                <option value="50-59">50 a 59 años</option>
+                                <option value="60-69">60 a 69 años</option>
+                                <option value="70-79">70 a 79 años</option>
+                                <option value="80-89">80 a 89 años</option>
+                                <option value="90-100">90 a 100 años</option>
+                            </select>
                         </label>
 
-                        <label class="form-group" for="busqueda-provincia">
-                            <span>Provincia / Ciudad</span>
-                            <input type="text" id="busqueda-provincia" name="ubicacion" placeholder="Córdoba, Buenos Aires...">
+                        <label class="form-group" for="busqueda-genero">
+                            <span>Género</span>
+                            <select id="busqueda-genero" name="genero">
+                                <option value="">Todos</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="No binario">Género fluido</option>
+                            </select>
                         </label>
+
                     </form>
                 </div>
 
@@ -92,7 +103,7 @@
             </section>
         </main>
 
-        <footer id="footer" class="site-footer">
+        <footer id="footer" class="sitio-footer">
             <p>© 2026 CastingCBA. Plataforma de búsqueda y postulación de talentos.</p>
         </footer>
     </div>

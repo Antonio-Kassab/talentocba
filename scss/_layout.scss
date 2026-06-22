@@ -6,7 +6,7 @@
   padding: 24px;
 }
 
-.site-header {
+.sitio-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -24,10 +24,7 @@
 
 .brand-logo {
   font-size: clamp(1.8rem, 2.4vw, 2.4rem);
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 800;
-  color: gradient(rgba(13, 141, 66, 0.478)) from 0% to 100% via $accent;    
+  font-weight: 700;
 }
 
 .brand-tag {
@@ -110,10 +107,66 @@
   border-radius: 20px;
 }
 
-.site-footer {
+.registro-contenedor {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.registro-contenedor > .formulario-panel,
+.registro-contenedor > .vista-modelo {
+  flex: 1;
+  min-width: 320px;
+}
+
+.vista-modelo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vista-modelo-cabecera {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tarjeta-modelo {
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+.tarjeta-avatar {
+  min-height: 220px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-muted;
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.panel-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sitio-footer {
   margin: 40px 0 20px;
   padding-top: 18px;
   color: $text-muted;
   border-top: 1px solid $border;
   text-align: center;
+}
+
+.registro-panel {
+  width: 100%;
 }

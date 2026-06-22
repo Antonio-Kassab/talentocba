@@ -6,14 +6,14 @@
     <title>Soy talento — TalentoCBA</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="Registro de actores — CastingCBA">
-    <script src="js/main.js"></script>
+    <script src="js/soy-talento.js"></script>
 </head>
 <body>
     <div class="app-shell">
-        <header class="site-header">
+        <header class="sitio-header">
             <div class="brand">
-                <span class="brand-logo">TalentoCBA</span>
-                <p class="brand-tag">Casting & Talento</p>
+                <span class="brand-logo">Talento<span class="resalto-rojo">CBA</span></span>
+                
             </div>
             <nav class="main-nav" aria-label="Navegación principal">
                 <a href="index.html" class="nav-link">Inicio</a>
@@ -46,8 +46,29 @@
                             </div>
 
                             <div class="form-group">
+                                <p>Género</p>
+                                <label class="radio-inline">
+                                    <input type="radio" id="actor-genero-hombre" name="genero" value="Hombre" checked>
+                                    Hombre
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="actor-genero-mujer" name="genero" value="Mujer">
+                                    Mujer
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" id="actor-genero-fluido" name="genero" value="Género fluido">
+                                    Género fluido
+                                </label>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="actor-email">Email</label>
                                 <input type="email" id="actor-email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="actor-celular">Celular</label>
+                                <input type="tel" id="actor-celular" name="celular" placeholder="Ej. +54 9 11 1234 5678">
                             </div>
 
                             <div class="form-group">
@@ -55,8 +76,8 @@
                                 <input type="url" id="actor-foto" name="foto" placeholder="https://ejemplo.com/mi-foto.jpg">
                             </div>
 
-                            <fieldset class="form-group grupo-habilidades">
-                                <legend>Habilidades</legend>
+                            <div class="form-group grupo-habilidades">
+                                <p>Habilidades:</p>
                                 <label class="checkbox-inline">
                                     <input type="checkbox" name="habilidades" value="teatro-fisico">
                                     Teatro físico
@@ -77,33 +98,41 @@
                                     <input type="checkbox" name="habilidades" value="actuacion-camara">
                                     Actuación frente a cámara
                                 </label>
-                            </fieldset>
+                            </div>
 
                             <button id="btn-registrarse" type="button" class="btn-enviar">Registrarse</button>
                         </form>
 
                         <aside class="vista-modelo">
                             <div class="vista-modelo-cabecera">
-                                <span class="badge">Vista previa</span>
-                                <h3>Ficha del actor</h3>
+                                <p>Vista previa</p>
+                                <h3>Ficha del actor/actriz</h3>
                                 <p>Tu formulario se reflejará aquí mientras avanzas.</p>
                             </div>
 
                             <div class="tarjeta-modelo">
-                                <div class="tarjeta-avatar">
-                                    <span>Foto</span>
-                                </div>
+                                    <div class="tarjeta-avatar" id="tarjeta-avatar-preview">
+                                        <span>Foto</span>
+                                    </div>
                                 <div class="tarjeta-detalle">
                                     <p class="tarjeta-etiqueta">Nombre</p>
                                     <p class="tarjeta-texto" id="tarjeta-nombre-preview"></p>
                                 </div>
                                 <div class="tarjeta-detalle">
                                     <p class="tarjeta-etiqueta">Edad</p>
-                                    <p class="tarjeta-texto"><!-- Cargado por codigo --> </p>
+                                    <p class="tarjeta-texto" id="tarjeta-edad-preview"><!-- Cargado por codigo --></p>
+                                </div>
+                                <div class="tarjeta-detalle">
+                                    <p class="tarjeta-etiqueta">Género</p>
+                                    <p class="tarjeta-texto" id="tarjeta-genero-preview">No especificado</p>
                                 </div>
                                 <div class="tarjeta-detalle">
                                     <p class="tarjeta-etiqueta">Email</p>
-                                    <p class="tarjeta-texto">tucorreo@ejemplo.com</p>
+                                    <p class="tarjeta-texto" id="tarjeta-email-preview">tucorreo@ejemplo.com</p>
+                                </div>
+                                <div class="tarjeta-detalle">
+                                    <p class="tarjeta-etiqueta">Celular</p>
+                                    <p class="tarjeta-texto" id="tarjeta-celular-preview">+54 9 351 1234 567</p>
                                 </div>
                                 <div class="tarjeta-detalle">
                                     <p class="tarjeta-etiqueta">Habilidades</p>
@@ -117,7 +146,7 @@
             </section>
         </main>
 
-        <footer id="footer" class="site-footer">
+        <footer id="footer" class="sitio-footer">
             <p>© 2026 CastingCBA. Plataforma de búsqueda y postulación de talentos.</p>
         </footer>
     </div>

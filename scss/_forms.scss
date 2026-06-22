@@ -38,22 +38,14 @@
   gap: 20px;
 }
 
+.formulario-panel {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+}
+
 .form-panel .form-group {
   max-width: 520px;
-}
-
-.skill-group {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
-  padding: 18px;
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.skill-group legend {
-  padding: 0 8px;
-  margin-left: 4px;
-  color: $text;
-  font-weight: 600;
 }
 
 .checkbox-inline {
@@ -69,7 +61,24 @@
   }
 }
 
-.btn-submit {
+/* Radios: input a la izquierda del texto, pegados */
+.radio-inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  padding: 10px 0;
+  color: $text-muted;
+
+  input {
+    width: auto;
+    accent-color: $accent;
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+}
+
+.btn-enviar {
   width: fit-content;
   padding: 14px 30px;
   border: none;
@@ -85,4 +94,46 @@
     transform: translateY(-1px);
     box-shadow: 0 18px 35px rgba(39, 174, 96, 0.18);
   }
+}
+
+.grupo-habilidades {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.tarjeta-detalle {
+  display: grid;
+  gap: 6px;
+}
+
+.tarjeta-etiqueta {
+  font-size: 0.85rem;
+  color: $text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.tarjeta-texto {
+  color: $text;
+  min-height: 1.4rem;
+}
+
+.tarjeta-habilidades {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.tarjeta-habilidades li {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(29, 214, 106, 0.12);
+  color: #e7fbef;
+  font-size: 0.92rem;
 }
