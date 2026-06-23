@@ -1,6 +1,6 @@
 @use 'variables' as *;
 
-.app-shell {
+.menu-header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 24px;
@@ -98,6 +98,7 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
+  color: $accent-contrast-soft;
 }
 
 .panel {
