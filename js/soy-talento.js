@@ -113,8 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const boton = document.getElementById("btn-registrarse");
   
   boton.addEventListener("click", function() {
-    // Aquí podrías agregar la lógica para enviar los datos a tu servidor o mostrar un mensaje de éxito.
-    // Por ejemplo:
+  
 
   const generoSeleccionado = Array.from(inputGeneroNodes).find(r => r.checked)?.value || '';
 

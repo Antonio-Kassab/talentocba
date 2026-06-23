@@ -8,7 +8,9 @@
         "teatro-fisico",
         "canto"
       ],
-      "genero": "Femenino"
+      "foto": "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
+      "genero": "Femenino",
+      "celular": "351-1234567"
     },
     {
       "nombre": "Valentin Pera",
@@ -19,7 +21,9 @@
         "actuacion-camara",
         "acentos"
       ],
-      "genero": "Masculino"
+      "foto": "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
+      "genero": "Masculino",
+      "celular": "351-1234567"
     },
     {
       "nombre": "Juan Sosa",
@@ -30,7 +34,9 @@
         "danza",
         "acentos"
       ],
-      "genero": "Femenino"
+      "foto": "https://st3.depositphotos.com/6672868/13701/v/450/depositphotos_137014128-stock-illustration-user-profile-icon.jpg",
+      "genero": "Masculino",
+      "celular": "351-1234567"
     }
   ]
 }
