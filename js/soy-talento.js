@@ -107,7 +107,6 @@ document.addEventListener('DOMContentLoaded', function() {
     checkbox.addEventListener('change', actualizarTarjeta);
   });
 
-  // Llamar función inicial
   actualizarTarjeta();
 
   const boton = document.getElementById("btn-registrarse");
@@ -131,9 +130,21 @@ document.addEventListener('DOMContentLoaded', function() {
     "Content-Type": "application/json; charset=UTF-8",
   },
 });
-alert("¡Registro exitoso! Gracias por unirte a nuestro talento."); // No se guardan realmente los datos en el servidor, ya que json-server es una herramienta de desarrollo y no tiene persistencia real.
-
+Swal.fire({
+  title: "¿Está listo tu perfil?",
+  text: "¡Asegúrate de que toda la información sea correcta antes de crear tu perfil!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#063807",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Crear perfil!"
+}).then((result) => {
+  if (result.isConfirmed) Swal.fire({
+    title: "¡Perfil creado!",
+    text: "Tu perfil de talento ha sido creado exitosamente.",
+    icon: "success"
+  });
 });
-
+});
 
 });
